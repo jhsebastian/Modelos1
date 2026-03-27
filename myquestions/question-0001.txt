@@ -1,0 +1,31 @@
+# Seleccion automatica de variables con informacion mutua
+
+### **El Problema:**
+
+Recibes un DataFrame con 122 filas y 11 variables numericas, junto con una variable objetivo binaria llamada `target`.
+Muchas variables pueden ser irrelevantes y afectar el rendimiento del modelo.
+
+Necesitas seleccionar automaticamente las variables mas informativas antes de entrenar.
+
+### **Tu Mision:**
+
+Escribe una funcion llamada:
+
+```python
+def seleccion_y_validacion(df, target_col, k_features):
+```
+
+Que realice lo siguiente:
+
+1. Separe X e y.
+2. Estandarice X usando `StandardScaler`.
+3. Use `SelectKBest` con `mutual_info_classif` para seleccionar las `k_features` mas relevantes.
+4. Entrene un modelo `GradientBoostingClassifier`.
+5. Evalue el modelo usando `StratifiedKFold` con 5 particiones y calcule el accuracy promedio.
+6. Devuelva:
+
+   * Los indices de las variables seleccionadas.
+   * El accuracy promedio de validacion cruzada.
+   * El numero total de variables originales vs seleccionadas.
+
+Para este caso, usa `k_features=3`.

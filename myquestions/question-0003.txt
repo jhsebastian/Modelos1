@@ -1,0 +1,31 @@
+# Clustering basado en densidad y evaluación interna
+
+### **El Problema:**
+
+Recibes un DataFrame con variables numéricas que representan comportamiento de usuarios.
+No tienes etiquetas y deseas identificar segmentos naturales en los datos.
+
+Quieres usar un método que detecte clusters de forma arbitraria y pueda identificar ruido.
+
+### **Tu Misión:**
+
+Escribe una función llamada:
+
+```python
+def clustering_dbscan(df, eps, min_samples):
+```
+
+Que realice lo siguiente:
+
+1. Escale los datos usando `RobustScaler`.
+2. Aplique el algoritmo `DBSCAN`.
+3. Calcule:
+
+   * El número de clusters encontrados (excluyendo ruido).
+   * El porcentaje de puntos considerados ruido.
+4. Si existen al menos 2 clusters válidos, calcule el `silhouette_score`.
+5. Devuelva:
+
+   * Las etiquetas generadas.
+   * El número de clusters.
+   * El silhouette score (o None si no es calculable).
