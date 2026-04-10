@@ -6,7 +6,7 @@ from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.preprocessing import StandardScaler
 
 
-def generar_caso_de_uso_seleccion_y_validacion():
+def generar_caso_de_uso_seleccion_y_validacion_q4():
     """
     Genera un caso de uso aleatorio para:
     seleccion_y_validacion(df, target_col, k_features)
@@ -72,7 +72,7 @@ def generar_caso_de_uso_seleccion_y_validacion():
 
 
 if __name__ == "__main__":
-    entrada, salida = generar_caso_de_uso_seleccion_y_validacion()
+    entrada, salida = generar_caso_de_uso_seleccion_y_validacion_q4()
     print("=== INPUT ===")
     print("target_col:", entrada["target_col"])
     print("k_features:", entrada["k_features"])

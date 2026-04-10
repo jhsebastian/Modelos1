@@ -1,6 +1,6 @@
 # Modelos-I
 
-Educational project for the **Programacion con LLMs** assignment at Universidad de Antioquia.  
+Educational project for the **Modelos & AI** assignment at Universidad de Antioquia.  
 This repository contains:
 
 - Custom machine learning questions (`question-000X.txt`)
